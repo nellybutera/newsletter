@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter Sign-up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="container">
+
+    <!-- ── Sign-up Card ── -->
+    <div class="card" id="signup-card">
+
+      <!-- Left: form content -->
+      <div class="card-content">
+        <h1>Stay updated!</h1>
+        <p class="subtitle">Join 60,000+ product managers receiving monthly updates on:</p>
+
+        <ul class="benefits">
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+
+        <form id="signup-form" novalidate>
+          <div class="form-group">
+            <div class="label-row">
+              <label for="email">Email address</label>
+              <span class="error-message" id="error-message">Valid email required</span>
+            </div>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="email@company.com"
+              autocomplete="email"
+            >
+          </div>
+          <button type="submit" class="btn btn-primary">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+
+      <!-- Right: illustration -->
+      <div class="card-illustration" aria-hidden="true">
+        <div class="illustration-wrapper">
+          <div class="illustration-desktop">
+            <img src="side-panel image.png" alt="" class="illustration-img">
+          </div>
+          <div class="illustration-mobile">
+            <img src="Mask group.png" alt="" class="illustration-img-mobile">
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.card -->
+
+  </main>
+
+  <!-- ── Success Modal ── -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="card card-success" id="success-card">
+
+      <div class="success-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <h1>Thanks for subscribing!</h1>
+
+      <p>
+        A confirmation email has been sent to <strong id="confirmed-email"></strong>.
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+
+      <button class="btn btn-primary" id="dismiss-btn">Dismiss message</button>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
