@@ -72,7 +72,7 @@ body {
 .card-content {
   flex: 1;
   min-width: 0;
-  padding: 2.5rem 1.4rem 2.5rem 2.5rem;
+  padding: 2.5rem 1.5rem 2.5rem 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -232,7 +232,7 @@ input[type="email"]:focus {
 .card-illustration {
   width: 400px;
   flex-shrink: 0;
-  padding: 24px 24px 24px 24px;
+  padding: 24px 24px 24px 12px;
   display: flex;
   align-items: stretch;
 }
@@ -443,7 +443,7 @@ input[type="email"]:focus {
   .card-content {
     order: 1;
     flex: 1 1 auto;
-    padding: 2.5rem 1.5rem 3rem;
+    padding: 2.5rem 24px 2.5rem;
     justify-content: flex-start;
     flex-basis: auto;
     gap: 1.25rem;
@@ -458,6 +458,12 @@ input[type="email"]:focus {
     gap: 1rem;
   }
 
+  
+  /* Push form to bottom of card on mobile */
+  #signup-form {
+    margin-top: auto;
+  }
+
   /* ── Mobile success  ── */
   .modal-overlay {
     background: var(--color-white);
@@ -470,8 +476,7 @@ input[type="email"]:focus {
     width: 100%;
     min-height: 100vh;
     border-radius: 0;
-    /* padding-bottom large so content doesn't hide under fixed btn */
-    padding: 4rem 1.5rem 8rem;
+    padding: 149px 24px 40px;
     justify-content: flex-start;
     transform: none;
     box-shadow: none;
@@ -481,10 +486,11 @@ input[type="email"]:focus {
     transform: none;
   }
 
+  /* Figma: icon 64×64, 40px gap to heading */
   .success-icon {
     width: 64px;
     height: 64px;
-    margin-bottom: 2.5rem;
+    margin-bottom: 40px;
   }
 
   .success-icon svg {
@@ -497,17 +503,19 @@ input[type="email"]:focus {
     margin-bottom: 1.25rem;
   }
 
+  /* Push button to the bottom via margin-top:auto */
   .card-success p {
     margin-bottom: 0;
   }
 
-  /* Dismiss pinned to viewport bottom */
   .card-success .btn-primary {
-    position: fixed;
-    bottom: 1.5rem;
-    left: 1.5rem;
-    right: 1.5rem;
-    width: auto;
+    margin-top: auto;
+    width: 100%;
+    height: 56px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: var(--radius-btn);
   }
 }
